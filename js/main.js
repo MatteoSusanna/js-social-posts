@@ -56,7 +56,6 @@ const posts = [
     }
 ];
 
-let arrayId = [];
 let containerDom = document.getElementById('container');
 
 for (let i = 0; i < posts.length; i++){
@@ -94,9 +93,8 @@ for (let i = 0; i < posts.length; i++){
 
 let iDom = document.querySelectorAll('.like-button__icon');
 let spanDom = document.querySelectorAll('.like-button__label');
-
 let contLinkeDom = document.querySelectorAll('.js-likes-counter');
-
+let arrayId = [];
 
 let likes = document.querySelectorAll('.like-button');
 for(let i = 0; i < likes.length; i++){
@@ -107,10 +105,13 @@ for(let i = 0; i < likes.length; i++){
             iDom[i].style.color= 'green';
             spanDom[i].style.color= 'green';
             contLinkeDom[i].innerHTML =  `${posts[i].likes + 1}`
-
+            arrayId.push(posts[i].id);
+            console.log(arrayId);
         }
     );
 }
+
+
 
 
 
