@@ -95,6 +95,8 @@ for (let i = 0; i < posts.length; i++){
 let iDom = document.querySelectorAll('.like-button__icon');
 let spanDom = document.querySelectorAll('.like-button__label');
 
+let contLinkeDom = document.querySelectorAll('.js-likes-counter');
+
 
 let likes = document.querySelectorAll('.like-button');
 for(let i = 0; i < likes.length; i++){
@@ -104,6 +106,8 @@ for(let i = 0; i < likes.length; i++){
             event.preventDefault();
             iDom[i].style.color= 'green';
             spanDom[i].style.color= 'green';
+            contLinkeDom[i].innerHTML =  `${posts[i].likes + 1}`
+
         }
     );
 }
