@@ -69,7 +69,7 @@ for (let i = 0; i < posts.length; i++){
                                             </div>
                                             <div class="post-meta__data">
                                                 <div class="post-meta__author">${posts[i].author['name']}</div>
-                                                <div class="post-meta__time">${posts[i].created}</div>
+                                                <div class="post-meta__time">${posts[i].created.substring(8, 10) + '/' + posts[i].created.substring(5, 7) + '/' + posts[i].created.substring(0, 4)}</div>
                                             </div>                    
                                         </div>
                                     </div>

@@ -56,9 +56,8 @@ const posts = [
     }
 ];
 
-
-
 let containerDom = document.getElementById('container');
+
 
 for (let i = 0; i < posts.length; i++){
     containerDom.innerHTML += `<div class="post">
@@ -69,7 +68,7 @@ for (let i = 0; i < posts.length; i++){
                                             </div>
                                             <div class="post-meta__data">
                                                 <div class="post-meta__author">${posts[i].author['name']}</div>
-                                                <div class="post-meta__time">${posts[i].created.split(' ').reverse().join('/')}</div>
+                                                <div class="post-meta__time">${posts[i].created}</div>
                                             </div>                    
                                         </div>
                                     </div>
@@ -92,6 +91,8 @@ for (let i = 0; i < posts.length; i++){
                                     </div>            
                                 </div>`
 };
+
+
 
 let iDom = document.querySelectorAll('.like-button__icon');
 let spanDom = document.querySelectorAll('.like-button__label');
