@@ -106,14 +106,20 @@ let likes = document.querySelectorAll('.like-button');
 for(let i = 0; i < likes.length; i++){
     likes[i].addEventListener('click',
         function(event){
-            event.preventDefault();
-            likes[i].classList.add('color-green');
-            contLinkeDom[i].innerHTML =  `${posts[i].likes + 1}`
-            
+            event.preventDefault();            
 
             if (arrayId.includes(posts[i].id)){
             }else{
                 arrayId.push(posts[i].id);
+            }
+
+            if(!likes[i].classList.contains('color-green')){
+                likes[i].classList.add('color-green');
+                contLinkeDom[i].innerHTML =  `${posts[i].likes + 1}`
+
+            } else{
+                likes[i].classList.remove('color-green');
+                contLinkeDom[i].innerHTML =  `${posts[i].likes}`
             }
 
 
