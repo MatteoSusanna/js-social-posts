@@ -95,15 +95,31 @@ for (let i = 0; i < posts.length; i++){
 let iDom = document.querySelectorAll('.like-button__icon');
 let spanDom = document.querySelectorAll('.like-button__label');
 
-document.querySelectorAll('.likes__cta').addEventListener('click', 
-    function(event){
-        event.preventDefault();
-        iDom.style.color = 'red';
-        spanDom.style.color = 'red';
 
-    }
-);
+let likes = document.querySelectorAll('.like-button');
+for(let i = 0; i < likes.length; i++){
+    likes[i].addEventListener('click',
 
+        function(event){
+            event.preventDefault();
+            iDom[i].style.color= 'green';
+            spanDom[i].style.color= 'green';
+        }
+    );
+}
+
+
+
+
+
+/*
+
+let aDom = document.querySelector('a');
+let valId = aDom.getAttribute('data-postid');
+console.log(valId)
+
+
+*/
 
 
 
